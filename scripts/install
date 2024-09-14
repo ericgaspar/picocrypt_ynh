@@ -24,7 +24,7 @@ ynh_script_progression "Building app..."
 ynh_go_install
 
 pushd $install_dir/build/
-	GOOS=js GOARCH=wasm go build -ldflags="-s -w" index.go
+	GOCACHE=/root/go/cache GOOS=js GOARCH=wasm go build -ldflags="-s -w" index.go
 popd
 
 ynh_go_remove
