@@ -24,7 +24,7 @@ ynh_script_progression "Building app..."
 ynh_go_install
 
 pushd $install_dir/build/
-	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 GOOS=js GOARCH=wasm go build -ldflags="-s -w" $install_dir/ picocrypt
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 GOOS=js GOARCH=wasm go build -ldflags="-s -w"
 popd
 
 ynh_go_remove
